@@ -1,0 +1,23 @@
+<ons-page id="categoriasPage">
+  <ons-toolbar>
+    
+    <div class="center">Cook Book</div>
+    <div class="right">
+      <!-- Toolbar-button  only visible for iOS/other. -->
+      <ons-if platform="ios other">
+        <ons-toolbar-button component="button/new-task">Nova</ons-toolbar-button>
+      </ons-if>
+    </div>
+  </ons-toolbar>
+  
+  <!-- Floating Action Button only visible for Android. -->
+  <ons-if platform="android">
+    <ons-fab position="right bottom" component="button/new-task">
+      <ons-icon icon="md-plus"></ons-icon>
+    </ons-fab>
+  </ons-if>
+  
+  <ons-list id="lista-categorias">
+    <ons-list-header>TODAS AS CATEGORIAS</ons-list-header>
+  </ons-list>
+</ons-page>

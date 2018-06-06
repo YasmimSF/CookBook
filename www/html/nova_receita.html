@@ -1,0 +1,43 @@
+<ons-page id="novaReceitaPage">
+  <ons-toolbar>
+    <div class="left"><ons-back-button>Todos</ons-back-button></div>
+    <div class="center">Nova receita</div>
+    <div class="right">
+      <ons-if platform="android">
+        <ons-toolbar-button component="button/save-task">
+          <ons-icon icon="md-save"></ons-icon>
+        </ons-toolbar-button>
+      </ons-if>
+    </div>
+  </ons-toolbar>
+
+  <ons-list-title>ADICIONAR NOVA RECEITA</ons-list-title>
+  <ons-list>
+    <ons-list-item>
+      <div class="center">
+        <ons-input id="title-input" type="text" placeholder="Título" float></ons-input>
+      </div>
+    </ons-list-item>
+    <ons-list-item>
+      <div class="center">
+        <ons-select id="cat-input">
+            <option value="0">Escolha uma categoria...</option>
+        </ons-select>
+      </div>
+    </ons-list-item>
+    <ons-list-item id="nova-cat" class="hidden">
+        <div class="center">
+            <ons-input id="nova-cat-input" type="text" placeholder="Nova categoria" float></ons-input>
+        </div>
+    </ons-list-item>
+    <ons-list-item >
+      <div class="center">
+        <textarea id="receita-input" class="textarea textarea--transparent" placeholder="Conteúdo da receita"></textarea>
+      </div>
+    </ons-list-item>
+  </ons-list>
+
+  <ons-if platform="ios other">
+    <ons-button modifier="large" component="button/save-task">Salvar nova receita</ons-button>
+  </ons-if>
+</ons-page>
